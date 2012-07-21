@@ -46,4 +46,16 @@ public class Order {
         this.orderID = orderID;
     }
     
+    public double getTotal() {
+        double total = 0.0;
+        for (OrderItem item : items) {
+            total += item.getItemTotal();
+        }
+        return total;
+    }
+    
+    public void addItem(OrderItem item) {
+        items.add(item);
+    }
+    
 }

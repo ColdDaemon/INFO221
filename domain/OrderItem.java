@@ -43,4 +43,8 @@ public class OrderItem {
         this.order = order;
     }
     
+    public double getItemTotal() {
+        return this.product.getPrice() * this.quantityPurchased;
+    }
+    
 }
